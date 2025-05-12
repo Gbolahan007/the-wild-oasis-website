@@ -16,7 +16,7 @@ function Filter() {
     router.replace(` ${pathname}?${params.toString()}`, { scroll: false });
   }
   return (
-    <div className="border border-primary-800 ">
+    <div className="border border-primary-800 flex">
       <button
         onClick={() => handleFilter("all")}
         className={`px-5 py-2 hover:bg-primary-700 ${
