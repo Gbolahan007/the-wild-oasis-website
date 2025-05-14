@@ -110,6 +110,7 @@ export async function deleteReservation(bookingId) {
   }
 
   // Revalidate reservation page cache
+  revalidatePath(`/account/reservation/edit${bookingId}`);
   revalidatePath("/account/reservation");
 }
 
