@@ -41,6 +41,10 @@ export async function updateGuest(formData) {
   revalidatePath("/account/profile");
 }
 
+export async function createBooking(formData) {
+  console.log(formData);
+}
+
 /**
  * Updates an existing reservation (number of guests and any notes)
  */
@@ -78,6 +82,7 @@ export async function updateReservation(formData) {
   }
 
   // Revalidate and redirect to reservation page
+  revalidatePath(`/account/reservation/edit${bookingId}`);
   revalidatePath("/account/reservation");
   redirect("/account/reservation");
 }
